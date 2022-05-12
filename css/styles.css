@@ -26,8 +26,36 @@ body {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /* Шапка */
+header {
+  border-bottom: 1px solid #ececec;
+}
 .logo {
+  margin-right: 93px;
+
   color: var(--black-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -38,7 +66,29 @@ body {
 .logo span {
   color: var(--accent-color);
 }
+
+/* main-nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+}
+
+.site-nav .item {
+  margin-right: 50px;
+}
+
+.site-nav .item:last-child {
+  margin-right: 0;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -53,6 +103,16 @@ body {
 .link.current {
   color: var(--accent-color);
 }
+
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.auth-nav .item + .item {
+  margin-left: 50px;
+}
+
 .auth-nav .link {
   color: var(--primary-text-color);
   font-weight: 500;
@@ -69,17 +129,25 @@ body {
 /* Герой */
 .hero {
   background-color: var(--bg-section-color);
+  text-align: center;
 }
 .hero-title {
+  margin-bottom: 30px;
+
   color: var(--white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 .hero button {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 200px;
+  height: 50px;
+
   background-color: var(--accent-color);
   color: var(--white-color);
   cursor: pointer;
@@ -91,7 +159,17 @@ body {
 }
 
 /* Особенности */
+.features.list {
+  display: flex;
+}
+
+.features > .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .features .title {
+  margin-bottom: 10px;
+
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -104,6 +182,23 @@ body {
 }
 
 /* Чем мы занимаемся */
+.section-wedo {
+  padding-top: 0;
+}
+
+.section-wedo .list {
+  display: flex;
+  margin-top: 50px;
+}
+
+.section-wedo .item:nth-child(-n + 2) {
+  margin-right: 30px;
+}
+
+.section-wedo img {
+  display: block;
+}
+
 .section-wedo .title {
   color: var(--secondary-text-color);
   font-weight: 700;
@@ -113,10 +208,28 @@ body {
 }
 
 /* Наша команда */
+.section-teem .list {
+  display: flex;
+}
+
+.section-teem .item {
+  flex-basis: calc((100%-90) / 4);
+  margin-right: 30px;
+  padding-bottom: 30px;
+
+  text-align: center;
+}
+
+.section-teem .item:nth-child(4) {
+  margin-right: 0;
+}
+
 .section-teem {
   background-color: var(--secondary-bg-color);
 }
 .teem-title {
+  margin-bottom: 50px;
+
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -127,6 +240,9 @@ body {
   color: var(--secondary-text-color);
 }
 .teem-name {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -139,18 +255,32 @@ body {
 }
 /* Футер */
 .bottom {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--bg-section-color);
 }
 .bottom a {
   color: var(--white-color);
 }
+
+.adress-list {
+  margin-top: 20px;
+}
+
 .adress-list .item {
+  margin-bottom: 9px;
+
   color: var(--white-color);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
 }
-.adress-list .link.item {
+
+.adress-list .item:last-child {
+  margin-bottom: 0;
+}
+
+.adress-list .link {
   color: var(--footer-color-adress);
   font-size: 14px;
   line-height: 1.71;
