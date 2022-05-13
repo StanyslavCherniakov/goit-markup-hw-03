@@ -49,6 +49,10 @@ ul {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
+img {
+  display: block;
+}
 /* Шапка */
 header {
   border-bottom: 1px solid #ececec;
@@ -292,7 +296,21 @@ header {
 }
 
 /* Портфолио */
+.projects .list.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.buttons .item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .button-item {
+  padding: 6px 22px;
+  border: transparent;
+  border-radius: 4px;
+
   background-color: var(--secondary-bg-color);
   color: var(--secondary-text-color);
   cursor: pointer;
@@ -305,6 +323,24 @@ header {
 .button-item:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
+}
+
+.list.project {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.project .item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.content {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
 }
 
 .project-title {
