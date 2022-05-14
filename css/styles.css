@@ -141,7 +141,7 @@ header {
   text-align: center;
 }
 .hero-title {
-  margin: 0 auto 30px auto;
+  margin: 0 auto;
   max-width: 650px;
 
   color: var(--white-color);
@@ -153,6 +153,7 @@ header {
 }
 .hero button {
   display: inline-block;
+  margin-top: 30px;
   padding: 10px 32px;
   border-radius: 4px;
   min-width: 200px;
