@@ -335,6 +335,12 @@ header {
   font-size: 16px;
   line-height: 1.62;
 }
+
+.buttons .active {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
 .button-item:hover,
 .button-item:focus {
   background-color: var(--accent-color);
